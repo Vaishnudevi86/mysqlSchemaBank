@@ -8,6 +8,8 @@ public class AccountHolder {
     private String address;
     private String contact_number;
     private Date date_of_birth;
+    public AccountHolder() {
+    }
 
     public AccountHolder(int account_holder_id, String name, String address, String contact_number, Date date_of_birth) {
         this.account_holder_id = account_holder_id;

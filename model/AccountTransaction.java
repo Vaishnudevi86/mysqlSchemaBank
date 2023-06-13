@@ -9,6 +9,9 @@ public class AccountTransaction {
     private double amount;
     private String transaction_type;
 
+    public AccountTransaction() {
+    }
+
     public AccountTransaction(int transaction_id, int account_id, Date transaction_date, double amount, String transaction_type) {
         this.transaction_id = transaction_id;
         this.account_id = account_id;

@@ -8,6 +8,9 @@ public class Loan {
     private double loan_amount;
     private float interest_rate ;
 
+    public Loan() {
+    }
+
     public Loan(int loan_id, int branch_id, int account_id, String loan_type, double loan_amount, float interest_rate) {
         this.loan_id = loan_id;
         this.branch_id = branch_id;

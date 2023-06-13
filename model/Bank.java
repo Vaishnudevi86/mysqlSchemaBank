@@ -1,6 +1,26 @@
 package bankdao.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlElements;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
+@XmlRootElement(name = "bank")
 public class Bank {
+    @XmlElement(name = "name")
+    private String name;
+
+    @XmlElementWrapper(name = "departments")
+    @XmlElement(name = "department")
+    private List<Department> departments;
+
+    @XmlElementWrapper(name = "accounts")
+    @XmlElements({
+            @XmlElement(name = "savingsAccount", type = SavingsAccount.class),
+            @XmlElement(name = "creditAccount", type = CreditAccount.class)
+    })
+    private List<Account> accounts = new ArrayList<>();
 
     private int bank_id;
     private String bank_name;
@@ -18,9 +38,6 @@ public class Bank {
         this.contact_number = contact_number;
     }
 
-    public int getBank_id() {
-        return bank_id;
-    }
 
     public void setBank_id(int bank_id) {
         this.bank_id = bank_id;
@@ -59,5 +76,4 @@ public class Bank {
                 ", contact_number='" + contact_number + '\'' +
                 '}';
     }
-}
-
+  }

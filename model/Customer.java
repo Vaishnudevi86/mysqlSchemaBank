@@ -7,6 +7,9 @@ public class Customer {
     private String address;
     private String contact_number;
 
+    public Customer() {
+    }
+
     public Customer(int customer_id, String customer_name, int branch_id, String address, String contact_number) {
         this.customer_id = customer_id;
         this.customer_name = customer_name;

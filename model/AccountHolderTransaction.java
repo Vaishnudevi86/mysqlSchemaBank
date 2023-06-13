@@ -5,6 +5,9 @@ public class AccountHolderTransaction {
     private int account_holder_id;
     private int transaction_id;
 
+    public AccountHolderTransaction() {
+    }
+
     public AccountHolderTransaction(int account_holder_transaction_id, int account_holder_id, int transaction_id) {
         this.account_holder_transaction_id = account_holder_transaction_id;
         this.account_holder_id = account_holder_id;

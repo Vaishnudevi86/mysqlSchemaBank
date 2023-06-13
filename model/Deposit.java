@@ -9,6 +9,9 @@ public class Deposit {
     private double deposit_amount;
     private Date deposit_date;
 
+    public Deposit() {
+    }
+
     public Deposit(int deposit_id, int branch_id, int account_id, double deposit_amount, Date deposit_date) {
         this.deposit_id = deposit_id;
         this.branch_id = branch_id;

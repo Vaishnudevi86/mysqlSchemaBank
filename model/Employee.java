@@ -1,13 +1,42 @@
 package bankdao.model;
 
-public class Employee {
-   private int employee_id;
-   private String employee_name;
-   private int branch_id;
-   private String designation;
-   private double salary;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import java.util.List;
 
-    public Employee(int employee_id, String employee_name, int branch_id, String designation, double salary) {
+
+@XmlAccessorType(XmlAccessType.FIELD)
+    public class Employee {
+        @XmlElement(name = "name")
+        private String name;
+
+        @XmlElement(name = "position")
+        private String position;
+
+        private int employee_id;
+        private String employee_name;
+        private int branch_id;
+        private String designation;
+        private double salary;
+
+        // Getters and setters
+        private List<Employee> employeeList;
+
+        // Getter and Setter for userList
+        public List<Employee> getEmployeeList() {
+            return employeeList;
+        }
+
+        public void setEmployeeList(List<Employee> employeeList) {
+            this.employeeList = employeeList;
+        }
+
+
+        public Employee() {
+        }
+
+        public Employee(int employee_id, String employee_name, int branch_id, String designation, double salary) {
         this.employee_id = employee_id;
         this.employee_name = employee_name;
         this.branch_id = branch_id;

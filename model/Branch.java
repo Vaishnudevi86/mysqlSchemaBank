@@ -1,26 +1,23 @@
 package bankdao.model;
 
 public class Branch {
-    private int account_id;
+
     private int branch_id;
-    private String account_type;
-    private double balance;
-    private int account_holder_id;
+    private String branch_name;
+    private int bank_id;
+    private String address;
+    private String contact_number;
 
-    public Branch(int account_id, int branch_id, String account_type, double balance, int account_holder_id) {
-        this.account_id = account_id;
+
+
+    public Branch(int branch_id, String branch_name, int bank_id, String address, String contact_number) {
         this.branch_id = branch_id;
-        this.account_type = account_type;
-        this.balance = balance;
-        this.account_holder_id = account_holder_id;
+        this.branch_name = branch_name;
+        this.bank_id = bank_id;
+        this.address = address;
+        this.contact_number = contact_number;
     }
-
-    public int getAccount_id() {
-        return account_id;
-    }
-
-    public void setAccount_id(int account_id) {
-        this.account_id = account_id;
+    public Branch() {
     }
 
     public int getBranch_id() {
@@ -31,38 +28,46 @@ public class Branch {
         this.branch_id = branch_id;
     }
 
-    public String getAccount_type() {
-        return account_type;
+    public String getBranch_name() {
+        return branch_name;
     }
 
-    public void setAccount_type(String account_type) {
-        this.account_type = account_type;
+    public void setBranch_name(String branch_name) {
+        this.branch_name = branch_name;
     }
 
-    public double getBalance() {
-        return balance;
+    public int getBank_id() {
+        return bank_id;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBank_id(int bank_id) {
+        this.bank_id = bank_id;
     }
 
-    public int getAccount_holder_id() {
-        return account_holder_id;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAccount_holder_id(int account_holder_id) {
-        this.account_holder_id = account_holder_id;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContact_number() {
+        return contact_number;
+    }
+
+    public void setContact_number(String contact_number) {
+        this.contact_number = contact_number;
     }
 
     @Override
     public String toString() {
         return "Branch{" +
-                "account_id=" + account_id +
-                ", branch_id=" + branch_id +
-                ", account_type='" + account_type + '\'' +
-                ", balance=" + balance +
-                ", account_holder_id=" + account_holder_id +
+                "branch_id=" + branch_id +
+                ", branch_name='" + branch_name + '\'' +
+                ", bank_id=" + bank_id +
+                ", address='" + address + '\'' +
+                ", contact_number='" + contact_number + '\'' +
                 '}';
     }
 }
